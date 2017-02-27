@@ -16,14 +16,11 @@
 					"iotop",
 					"p7zip",
 					"rar",
-					"ripgrep",
 					"screen",
 					"traceroute",
 					"unrar",
 					"unzip",
-					"zip",
-					"zplug",
-					"zsh"
+					"zip"
 				]
 			},
 			"desktop": {
@@ -48,8 +45,11 @@
 					"downgrader",
 					"jq",
 					"neofetch",
+					"ripgrep",
 					"sshfs",
-					"wrk"
+					"wrk",
+					"zplug",
+					"zsh"
 				],
 				"devel": [
 					"ansible",
