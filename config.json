@@ -146,6 +146,7 @@
 					"gnome-shell-extension-topicons-plus-git"
 				],
 				"xapps": [
+					"atom-editor-bin",
 					"calibre",
 					"chromium",
 					"darktable",
@@ -165,7 +166,6 @@
 					"transmission-gtk",
 					"virtualbox-host-dkms",
 					"virtualbox",
-					"visual-studio-code",
 					"vlc"
 				]
 			},
@@ -236,20 +236,32 @@
 		}
 	},
 	"misc": {
-		"vscode_ext": [
-			"akamud.vscode-theme-onedark",
-			"anseki.vscode-color",
-			"DavidAnson.vscode-markdownlint",
-			"dbaeumer.vscode-eslint",
-			"donjayamanne.githistory",
-			"donjayamanne.python",
-			"HookyQR.beautify",
-			"lukehoban.Go",
-			"mkaufman.HTMLHint",
-			"PeterJausovec.vscode-docker",
-			"shinnn.stylelint",
-			"steve8708.Align",
-			"timonwong.shellcheck"
+		"atom_ext": [
+			"atom-alignment",
+			"atom-ternjs",
+			"atom-typescript",
+			"autocomplete-ansible",
+			"autocomplete-json",
+			"autocomplete-python",
+			"color-picker",
+			"file-icons",
+			"git-plus",
+			"go-plus",
+			"language-ansible",
+			"language-docker",
+			"language-markdown",
+			"linter-ansible-linting",
+			"linter-csslint",
+			"linter-docker",
+			"linter-eslint",
+			"linter-htmlhint",
+			"linter-jsonlint",
+			"linter-markdown",
+			"linter-pylint",
+			"linter-shellcheck",
+			"python-tools",
+			"sort-lines",
+			"termination"
 		]
 	}
 }

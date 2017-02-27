@@ -143,11 +143,11 @@ install_packages_gaming() {
 
 
 # -----------------------------------------------------------------------------
-# install vscode extensions
+# install atom extensions
 # -----------------------------------------------------------------------------
-install_vscode_extensions() {
-    for ext in $(helper_cfg_get "misc.vscode_ext"); do
-        code --install-extension "${ext}" || true
+install_atom_extensions() {
+    for ext in $(helper_cfg_get "misc.atom_ext"); do
+        apm install "${ext}" || true
     done
 }
 
@@ -207,7 +207,7 @@ config_gnome() {
     gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type "'suspend'"
     gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing "'rgba'"
     gsettings set org.gnome.settings-daemon.plugins.xsettings hinting "'slight'"
-    gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'visual-studio-code.desktop', 'spotify.desktop', 'rambox.desktop', 'chromium.desktop']"
+    gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'atom.desktop', 'spotify.desktop', 'rambox.desktop', 'chromium.desktop']"
     gsettings set org.gnome.shell.extensions.user-theme name "'Arc-Dark'"
     gsettings set org.gnome.shell.overrides dynamic-workspaces false
     gsettings set org.gnome.system.locale region "'en_US.UTF-8'"
@@ -348,7 +348,7 @@ options=("install_pacaur" "1 | Install AUR helper tool" off
          "config_personal_fixes_notebook" "3 | Configuration of notebook fixes" off
          "install_packages_nvidia" "4 | Install Nvidia driver pkgs" off
          "config_gnome" "5 | Configuration of GNOME desktop" off
-         "install_vscode_extensions" "5 | Install VSCode extensions" off
+         "install_atom_extensions" "5 | Install Atom extensions" off
          "install_packages_kubernetes" "O | Install Kubernetes dev pkgs" off
          "install_packages_gaming" "O | Install gaming pkgs" off
          "generate_sshkeys" "O | Generate new SSH keys" off)
