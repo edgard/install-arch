@@ -272,12 +272,14 @@ config_gnome() {
     GSETTINGS_SCHEMA_DIR=/usr/share/gnome-shell/extensions/dash-to-panel@jderose9.github.com/schemas gsettings set org.gnome.shell.extensions.dash-to-panel tray-padding "2"
     GSETTINGS_SCHEMA_DIR=/usr/share/gnome-shell/extensions/dash-to-panel@jderose9.github.com/schemas gsettings set org.gnome.shell.extensions.dash-to-panel status-icon-padding "8"
     GSETTINGS_SCHEMA_DIR=/usr/share/gnome-shell/extensions/dash-to-panel@jderose9.github.com/schemas gsettings set org.gnome.shell.extensions.dash-to-panel appicon-margin "6"
+    GSETTINGS_SCHEMA_DIR=/usr/share/gnome-shell/extensions/dash-to-panel@jderose9.github.com/schemas gsettings set org.gnome.shell.extensions.dash-to-panel show-showdesktop-button false
 
     # ext: topicons-plus
     GSETTINGS_SCHEMA_DIR=/usr/share/gnome-shell/extensions/TopIcons@phocean.net/schemas gsettings set org.gnome.shell.extensions.topicons icon-saturation "0.0"
     GSETTINGS_SCHEMA_DIR=/usr/share/gnome-shell/extensions/TopIcons@phocean.net/schemas gsettings set org.gnome.shell.extensions.topicons icon-opacity "255"
     GSETTINGS_SCHEMA_DIR=/usr/share/gnome-shell/extensions/TopIcons@phocean.net/schemas gsettings set org.gnome.shell.extensions.topicons icon-size "22"
     GSETTINGS_SCHEMA_DIR=/usr/share/gnome-shell/extensions/TopIcons@phocean.net/schemas gsettings set org.gnome.shell.extensions.topicons icon-spacing "14"
+    GSETTINGS_SCHEMA_DIR=/usr/share/gnome-shell/extensions/TopIcons@phocean.net/schemas gsettings set org.gnome.shell.extensions.topicons tray-order "2"
 
     # ext: openweather
     gsettings set org.gnome.shell.extensions.openweather weather-provider "'darksky.net'"
