@@ -87,6 +87,7 @@
 					"gtk3-print-backends",
 					"gufw",
 					"gutenprint",
+					"libappindicator-gtk3",
 					"libcanberra-pulse",
 					"libdvdcss",
 					"mesa-vdpau",
