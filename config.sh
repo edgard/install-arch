@@ -207,7 +207,7 @@ config_gnome() {
     gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type "'suspend'"
     gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing "'rgba'"
     gsettings set org.gnome.settings-daemon.plugins.xsettings hinting "'slight'"
-    gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'atom.desktop', 'spotify.desktop', 'rambox.desktop', 'chromium.desktop']"
+    gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'atom.desktop', 'spotify.desktop', 'skypeforlinux.desktop', 'telegramdesktop.desktop', 'chromium.desktop']"
     gsettings set org.gnome.shell.extensions.user-theme name "'Arc-Dark'"
     gsettings set org.gnome.shell.overrides dynamic-workspaces false
     gsettings set org.gnome.system.locale region "'en_US.UTF-8'"
