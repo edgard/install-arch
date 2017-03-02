@@ -52,6 +52,7 @@
 					"zsh"
 				],
 				"devel": [
+					"ansible-lint",
 					"ansible",
 					"autopep8",
 					"cmake",
