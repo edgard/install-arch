@@ -158,7 +158,6 @@
 					"meld",
 					"pepper-flash",
 					"pitivi",
-					"redshift",
 					"simplescreenrecorder",
 					"skypeforlinux-bin",
 					"spotify",
@@ -195,7 +194,6 @@
 				"empathy",
 				"epiphany",
 				"gnome-contacts",
-				"gnome-system-log",
 				"totem"
 			]
 		}
