@@ -305,25 +305,6 @@ config_gnome() {
 
 
 # -----------------------------------------------------------------------------
-# configuration of personal desktop fixes
-# -----------------------------------------------------------------------------
-config_personal_fixes_desktop() {
-    sudo install -Dm644 -o root -g root files/personal/20-nvidia.conf /etc/X11/xorg.conf.d/20-nvidia.conf
-    sudo sed 's/^GRUB_GFXPAYLOAD_LINUX=.*/GRUB_GFXPAYLOAD_LINUX=text/' -i /etc/default/grub
-    helper_file_append /etc/environment "CLUTTER_VBLANK=none"
-    helper_update_boot
-}
-
-
-# -----------------------------------------------------------------------------
-# configuration of personal notebook fixes
-# -----------------------------------------------------------------------------
-config_personal_fixes_notebook() {
-    sudo install -Dm644 -o root -g root files/personal/20-intel.conf /etc/X11/xorg.conf.d/20-intel.conf
-}
-
-
-# -----------------------------------------------------------------------------
 # generate ssh keys
 # -----------------------------------------------------------------------------
 generate_sshkeys() {
@@ -346,11 +327,9 @@ options=("install_pacaur" "1 | Install AUR helper tool" off
          "config_base" "1 | Configuration for base" off
          "install_packages_desktop" "2 | Install desktop pkgs" off
          "config_desktop" "2 | Configuration for desktop" off
-         "config_personal_fixes_desktop" "3 | Configuration of desktop fixes" off
-         "config_personal_fixes_notebook" "3 | Configuration of notebook fixes" off
-         "install_packages_nvidia" "4 | Install Nvidia driver pkgs" off
-         "config_gnome" "5 | Configuration of GNOME desktop" off
-         "install_atom_extensions" "5 | Install Atom extensions" off
+         "install_packages_nvidia" "3 | Install Nvidia driver pkgs" off
+         "config_gnome" "4 | Configuration of GNOME desktop" off
+         "install_atom_extensions" "4 | Install Atom extensions" off
          "install_packages_kubernetes" "O | Install Kubernetes dev pkgs" off
          "install_packages_gaming" "O | Install gaming pkgs" off
          "generate_sshkeys" "O | Generate new SSH keys" off)
