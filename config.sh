@@ -172,8 +172,7 @@ config_desktop() {
     sudo sed 's/^hosts:.*/hosts: files mymachines mdns_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] dns myhostname/' -i /etc/nsswitch.conf
     sudo nscd -i hosts
 
-    sudo ln -sf /etc/fonts/conf.avail/10-antialias.conf /etc/fonts/conf.d/10-antialias.conf
-    sudo ln -sf /etc/fonts/conf.avail/10-hinting.conf /etc/fonts/conf.d/10-hinting.conf
+    sudo ln -sf /etc/fonts/conf.avail/10-hinting-slight.conf /etc/fonts/conf.d/10-hinting-slight.conf
     sudo ln -sf /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d/10-sub-pixel-rgb.conf
     sudo ln -sf /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/11-lcdfilter-default.conf
     sudo ln -sf /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/70-no-bitmaps.conf
