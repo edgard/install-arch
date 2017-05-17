@@ -185,6 +185,8 @@ config_desktop() {
     helper_file_append /etc/xdg/Trolltech.conf "[Qt]"
     helper_file_append /etc/xdg/Trolltech.conf "style=GTK+"
     helper_file_append /etc/environment "QT_QPA_PLATFORMTHEME=gtk2"
+
+    sudo sed '/^load-module module-suspend-on-idle/ s/^#*/#/' -i /etc/pulse/default.pa
 }
 
 
