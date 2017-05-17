@@ -266,7 +266,7 @@ config_gnome() {
     # ext: dash-to-panel
     GSETTINGS_SCHEMA_DIR=/usr/share/gnome-shell/extensions/dash-to-panel@jderose9.github.com/schemas gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-focused "SQUARES"
     GSETTINGS_SCHEMA_DIR=/usr/share/gnome-shell/extensions/dash-to-panel@jderose9.github.com/schemas gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-unfocused "SQUARES"
-    GSETTINGS_SCHEMA_DIR=/usr/share/gnome-shell/extensions/dash-to-panel@jderose9.github.com/schemas gsettings set org.gnome.shell.extensions.dash-to-panel location-clock "'NATURAL'"
+    GSETTINGS_SCHEMA_DIR=/usr/share/gnome-shell/extensions/dash-to-panel@jderose9.github.com/schemas gsettings set org.gnome.shell.extensions.dash-to-panel location-clock "'STATUSRIGHT'"
     GSETTINGS_SCHEMA_DIR=/usr/share/gnome-shell/extensions/dash-to-panel@jderose9.github.com/schemas gsettings set org.gnome.shell.extensions.dash-to-panel animate-show-apps true
     GSETTINGS_SCHEMA_DIR=/usr/share/gnome-shell/extensions/dash-to-panel@jderose9.github.com/schemas gsettings set org.gnome.shell.extensions.dash-to-panel tray-padding "2"
     GSETTINGS_SCHEMA_DIR=/usr/share/gnome-shell/extensions/dash-to-panel@jderose9.github.com/schemas gsettings set org.gnome.shell.extensions.dash-to-panel status-icon-padding "8"
