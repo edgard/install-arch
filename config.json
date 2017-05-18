@@ -28,6 +28,7 @@
 					"ethtool",
 					"nss-mdns",
 					"powertop",
+					"thermald",
 					"tlp-rdw",
 					"tlp",
 					"x86_energy_perf_policy"
@@ -217,6 +218,7 @@
 				"gdm",
 				"NetworkManager",
 				"org.cups.cupsd",
+				"thermald",
 				"tlp-sleep",
 				"tlp",
 				"ufw"
