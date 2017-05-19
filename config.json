@@ -235,34 +235,5 @@
 				"systemd-rfkill.socket"
 			]
 		}
-	},
-	"misc": {
-		"atom_ext": [
-			"atom-alignment",
-			"atom-ternjs",
-			"atom-typescript",
-			"autocomplete-ansible",
-			"autocomplete-json",
-			"autocomplete-python",
-			"color-picker",
-			"file-icons",
-			"git-plus",
-			"go-plus",
-			"language-ansible",
-			"language-docker",
-			"language-markdown",
-			"linter-ansible-linting",
-			"linter-csslint",
-			"linter-docker",
-			"linter-eslint",
-			"linter-htmlhint",
-			"linter-jsonlint",
-			"linter-markdown",
-			"linter-pylint",
-			"linter-shellcheck",
-			"python-tools",
-			"sort-lines",
-			"termination"
-		]
 	}
 }
