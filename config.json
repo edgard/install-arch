@@ -1,238 +1,318 @@
 {
-	"packages": {
-		"install": {
-			"common": {
-				"base": [
-					"docker",
-					"haveged",
-					"intel-ucode",
-					"lm_sensors",
-					"openssh",
-					"smartmontools"
-				],
-				"misc": [
-					"arch-diff",
-					"htop",
-					"iotop",
-					"p7zip",
-					"rar",
-					"screen",
-					"traceroute",
-					"unrar",
-					"unzip",
-					"zip"
-				]
-			},
-			"desktop": {
-				"base": [
-					"ethtool",
-					"nss-mdns",
-					"powertop",
-					"thermald",
-					"tlp-rdw",
-					"tlp",
-					"x86_energy_perf_policy"
-				],
-				"kernel": [
-					"linux-headers",
-					"linux-zen-headers",
-					"linux-zen"
-				],
-				"misc": [
-					"android-tools",
-					"aria2",
-					"asciinema",
-					"ddclient",
-					"downgrader",
-					"jq",
-					"neofetch",
-					"ripgrep",
-					"sshfs",
-					"wrk",
-					"zplug",
-					"zsh"
-				],
-				"devel": [
-					"ansible-lint",
-					"ansible",
-					"autopep8",
-					"cmake",
-					"fabric",
-					"gitflow-avh",
-					"glide",
-					"go-tools",
-					"go",
-					"jre8-openjdk",
-					"python-jedi",
-					"python-pip",
-					"python-pylint",
-					"python-virtualenv",
-					"python-virtualenvwrapper",
-					"salt",
-					"shellcheck",
-					"vagrant"
-				],
-				"xdeps": [
-					"bluez-cups",
-					"bluez-firmware",
-					"bluez-utils",
-					"bluez",
-					"gst-libav",
-					"gst-plugins-bad",
-					"gst-plugins-base",
-					"gst-plugins-good",
-					"gst-plugins-ugly",
-					"gstreamer-vaapi",
-					"gtk3-print-backends",
-					"gufw",
-					"gutenprint",
-					"libappindicator-gtk3",
-					"libcanberra-pulse",
-					"libdvdcss",
-					"mesa-vdpau",
-					"mesa",
-					"networkmanager-openvpn",
-					"networkmanager-pptp",
-					"networkmanager",
-					"pulseaudio-alsa",
-					"pulseaudio-bluetooth",
-					"pulseaudio-jack",
-					"pulseaudio-zeroconf",
-					"pulseaudio",
-					"qt4",
-					"qt5-styleplugins",
-					"xorg"
-				],
-				"thumbnailers": [
-					"ffmpegthumbnailer",
-					"libgsf",
-					"libopenraw"
-				],
-				"themes": [
-					"arc-gtk-theme",
-					"papirus-icon-theme-git"
-				],
-				"fonts": [
-					"ttf-liberation",
-					"ttf-ubuntu-font-family"
-				],
-				"iconfixers": [
-					"hardcode-fixer-git",
-					"hardcode-tray-git"
-				],
-				"gnome": [
-					"argyllcms",
-					"brasero",
-					"cheese",
-					"file-roller",
-					"gedit",
-					"gnome-color-manager",
-					"gnome-sound-recorder",
-					"gnome-tweak-tool",
-					"gnome",
-					"menulibre",
-					"rygel",
-					"seahorse",
-					"vinagre"
-				],
-				"gnome_ext": [
-					"gnome-shell-extension-clipboard-indicator-git",
-					"gnome-shell-extension-dash-to-panel-git",
-					"gnome-shell-extension-nohotcorner-git",
-					"gnome-shell-extension-openweather-git",
-					"gnome-shell-extension-panel-osd-git",
-					"gnome-shell-extension-topicons-plus-git"
-				],
-				"xapps": [
-					"atom-editor-bin",
-					"calibre",
-					"chromium",
-					"darktable",
-					"dropbox",
-					"enpass-bin",
-					"firefox",
-					"gimp",
-					"gitkraken",
-					"handbrake",
-					"inkscape",
-					"libreoffice-fresh",
-					"meld",
-					"pepper-flash",
-					"pitivi",
-					"simplescreenrecorder",
-					"skypeforlinux-bin",
-					"spotify",
-					"telegram-desktop-bin",
-					"transmission-gtk",
-					"virtualbox-host-dkms",
-					"virtualbox",
-					"vlc"
-				]
-			},
-			"misc": {
-				"nvidia": [
-					"libva-vdpau-driver",
-					"nvidia-dkms",
-					"nvidia-libgl",
-					"nvidia-settings",
-					"opencl-nvidia"
-				],
-				"kubernetes": [
-					"kubectl-bin",
-					"minikube",
-					"packer-io",
-					"terraform-bin"
-				],
-				"gaming": [
-					"playonlinux",
-					"steam"
-				]
-			}
-		},
-		"remove": {
-			"common": [],
-			"desktop": [
-				"empathy",
-				"epiphany",
-				"gnome-contacts",
-				"totem"
-			]
-		}
-	},
-	"services": {
-		"enable": {
-			"common": [
-				"docker.socket",
-				"haveged",
-				"lm_sensors",
-				"nscd",
-				"smartd",
-				"sshd"
-			],
-			"desktop": [
-				"avahi-daemon",
-				"bluetooth",
-				"cups-browsed",
-				"ddclient",
-				"gdm",
-				"NetworkManager",
-				"org.cups.cupsd",
-				"thermald",
-				"tlp-sleep",
-				"tlp",
-				"ufw"
-			]
-		},
-		"disable": {
-			"common": [],
-			"desktop": []
-		},
-		"mask": {
-			"common": [],
-			"desktop": [
-				"systemd-rfkill.service",
-				"systemd-rfkill.socket"
-			]
-		}
-	}
+  "packages": {
+    "install": {
+      "common": {
+        "base": [
+          "dhcpcd",
+          "docker",
+          "haveged",
+          "intel-ucode",
+          "lm_sensors",
+          "openssh",
+          "smartmontools"
+        ],
+        "devel": [
+          "base-devel",
+          "git",
+          "linux-headers",
+          "mercurial"
+        ],
+        "misc": [
+          "arch-diff",
+          "bind-tools",
+          "htop",
+          "iotop",
+          "p7zip",
+          "ranger",
+          "socat",
+          "tmux",
+          "traceroute",
+          "unrar",
+          "unzip",
+          "zip"
+        ]
+      },
+      "dwm": {
+        "base": [
+          "ethtool",
+          "nss-mdns",
+          "powertop",
+          "thermald",
+          "tlp",
+          "tlp-rdw",
+          "x86_energy_perf_policy"
+        ],
+        "bluetooth": [
+          "bluez",
+          "bluez-cups",
+          "bluez-firmware",
+          "bluez-utils"
+        ],
+        "fonts": [
+          "noto-fonts",
+          "noto-fonts-emoji",
+          "ttf-dejavu",
+          "ttf-liberation",
+          "ttf-material-design-icons",
+          "ttf-roboto"
+        ],
+        "gstreamer": [
+          "gst-libav",
+          "gst-plugins-bad",
+          "gst-plugins-base",
+          "gst-plugins-good",
+          "gst-plugins-ugly",
+          "gstreamer-vaapi",
+          "libdvdcss"
+        ],
+        "gvfs": [
+          "gvfs",
+          "gvfs-afc",
+          "gvfs-goa",
+          "gvfs-google",
+          "gvfs-gphoto2",
+          "gvfs-mtp",
+          "gvfs-nfs",
+          "gvfs-smb"
+        ],
+        "iconfixers": [
+          "hardcode-fixer-git",
+          "hardcode-tray-git"
+        ],
+        "networkmanager": [
+          "networkmanager",
+          "networkmanager-openvpn",
+          "networkmanager-pptp"
+        ],
+        "printers": [
+          "cups",
+          "cups-filters",
+          "foomatic-db-engine",
+          "foomatic-db-gutenprint-ppds",
+          "foomatic-db-nonfree-ppds",
+          "foomatic-db-ppds",
+          "ghostscript",
+          "gsfonts",
+          "gtk3-print-backends",
+          "gutenprint"
+        ],
+        "pulseaudio": [
+          "libcanberra-pulse",
+          "pulseaudio",
+          "pulseaudio-alsa",
+          "pulseaudio-bluetooth",
+          "pulseaudio-jack",
+          "pulseaudio-zeroconf"
+        ],
+        "themes": [
+          "arc-gtk-theme",
+          "gtk-engine-murrine",
+          "papirus-icon-theme-git"
+        ],
+        "thumbnailers": [
+          "ffmpegthumbnailer",
+          "libgsf",
+          "libopenraw",
+          "tumbler"
+        ],
+        "wm": [
+          "dmenu",
+          "dunst",
+          "dwm-git",
+          "engrampa",
+          "galculator",
+          "gnome-keyring",
+          "gnome-screenshot",
+          "gpicview-gtk3",
+          "gucharmap",
+          "lxappearance-gtk3",
+          "lxdm-gtk3",
+          "lxdm-themes",
+          "lxinput-gtk3",
+          "lxrandr-gtk3",
+          "lxsession-gtk3",
+          "lxtask-gtk3",
+          "nitrogen",
+          "pavucontrol",
+          "pcmanfm-gtk3",
+          "slock",
+          "slstatus-git",
+          "st-git",
+          "xautolock",
+          "xcompmgr"
+        ],
+        "xapps": [
+          "displaycal",
+          "firefox",
+          "gimp",
+          "google-chrome",
+          "gufw",
+          "vlc",
+          "zathura",
+          "zathura-pdf-poppler"
+        ],
+        "xorg": [
+          "libappindicator-gtk3",
+          "libnotify",
+          "mesa",
+          "qt5-styleplugins",
+          "xclip",
+          "xdg-user-dirs",
+          "xorg",
+          "xorg-fonts-misc",
+          "xterm"
+        ]
+      },
+      "dwm_minimal": {
+        "fonts": [
+          "noto-fonts",
+          "ttf-dejavu",
+          "ttf-liberation"
+        ],
+        "wm": [
+          "dmenu",
+          "dwm-git",
+          "hsetroot",
+          "slstatus-git",
+          "st-git",
+          "xcompmgr"
+        ],
+        "xapps": [
+          "surf",
+          "sxiv",
+          "zathura",
+          "zathura-pdf-poppler"
+        ],
+        "xorg": [
+          "libxkbcommon-x11",
+          "mesa",
+          "xclip",
+          "xorg",
+          "xorg-fonts-misc",
+          "xorg-xinit"
+        ]
+      },
+      "tools": {
+        "devel": [
+          "go",
+          "goreleaser",
+          "python",
+          "python2"
+        ],
+        "devel_cloud": [
+          "ansible",
+          "aws-cli",
+          "google-cloud-sdk",
+          "kubectl",
+          "terraform"
+        ],
+        "misc": [
+          "aria2",
+          "asciinema",
+          "fd",
+          "fzf",
+          "neofetch",
+          "neovim",
+          "ripgrep",
+          "sshfs"
+        ],
+        "neovim_linters": [
+          "ansible-lint",
+          "fixjson",
+          "gitlint",
+          "golangci-lint",
+          "hadolint-bin",
+          "jq",
+          "nodejs-jsonlint",
+          "prettier",
+          "python-black",
+          "shellcheck",
+          "shfmt",
+          "tflint",
+          "vint",
+          "yamllint",
+          "yapf"
+        ]
+      },
+      "misc": {
+        "gaming": [
+          "playonlinux",
+          "steam"
+        ],
+        "minikube": [
+          "dnsmasq",
+          "docker-machine-driver-kvm2",
+          "ebtables",
+          "kubectl",
+          "minikube",
+          "qemu-headless"
+        ],
+        "nvidia": [
+          "libva-vdpau-driver",
+          "mesa-vdpau",
+          "nvidia-dkms",
+          "nvidia-libgl",
+          "nvidia-settings",
+          "opencl-nvidia"
+        ],
+        "virtualbox_guest": [
+          "virtualbox-guest-modules-arch",
+          "virtualbox-guest-utils"
+        ],
+        "virtualbox_host": [
+          "virtualbox",
+          "virtualbox-host-dkms"
+        ],
+        "vmware_guest": [
+          "open-vm-tools",
+          "xf86-input-vmmouse",
+          "xf86-video-vmware",
+          "gtkmm3"
+        ]
+      }
+    },
+    "remove": {
+      "common": [],
+      "dwm": []
+    }
+  },
+  "services": {
+    "disable": {
+      "common": [],
+      "dwm": [
+        "dhcpcd.service",
+        "systemd-resolved.service"
+      ]
+    },
+    "enable": {
+      "common": [
+        "dhcpcd",
+        "docker.socket",
+        "haveged",
+        "lm_sensors",
+        "nscd",
+        "smartd",
+        "sshd"
+      ],
+      "dwm": [
+        "avahi-daemon",
+        "bluetooth",
+        "cups-browsed",
+        "lxdm",
+        "NetworkManager",
+        "org.cups.cupsd",
+        "thermald",
+        "tlp",
+        "tlp-sleep",
+        "ufw"
+      ]
+    },
+    "mask": {
+      "common": [],
+      "dwm": [
+        "systemd-rfkill.service",
+        "systemd-rfkill.socket"
+      ]
+    }
+  }
 }
