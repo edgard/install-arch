@@ -156,7 +156,7 @@
           "libnotify",
           "mesa",
           "qt5-styleplugins",
-          "xclip",
+          "xsel",
           "xdg-user-dirs",
           "xorg",
           "xorg-fonts-misc",
@@ -186,7 +186,7 @@
         "xorg": [
           "libxkbcommon-x11",
           "mesa",
-          "xclip",
+          "xsel",
           "xorg",
           "xorg-fonts-misc",
           "xorg-xinit"
