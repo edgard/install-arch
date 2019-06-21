@@ -218,6 +218,7 @@
         ],
         "neovim_linters": [
           "ansible-lint",
+          "bash-language-server",
           "fixjson",
           "gitlint",
           "golangci-lint",
