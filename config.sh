@@ -6,9 +6,9 @@ set -Eeuxo pipefail
 # helpers
 # -----------------------------------------------------------------------------
 helper_pkg_exists() {
-	if [[ "$1" == "" ]]; then return; fi
-	local _package=$1
-	if pacman -Qs "^${_package}$" >/dev/null; then
+	local _args=$*
+	if [[ "$_args" == "" ]]; then return; fi
+	if pacman -Qs "^${_args}$" >/dev/null; then
 		return 0
 	else
 		return 1
@@ -16,43 +16,45 @@ helper_pkg_exists() {
 }
 
 helper_pkg_install() {
-	if [[ "$1" == "" ]]; then return; fi
-	local _packages=$*
-	yay -S --needed --noconfirm --noprogressbar --nocleanmenu --nodiffmenu --noeditmenu --removemake --cleanafter ${_packages}
+	local _args=$*
+	if [[ "$_args" == "" ]]; then return; fi
+	yay -S --needed --noconfirm --noprogressbar --nocleanmenu --nodiffmenu --noeditmenu --removemake --cleanafter ${_args}
 }
 
 helper_pkg_remove() {
-	if [[ "$1" == "" ]]; then return; fi
-	local _packages=$*
-	sudo pacman -Rns --noconfirm --noprogressbar ${_packages}
+	local _args=$*
+	if [[ "$_args" == "" ]]; then return; fi
+	sudo pacman -Rns --noconfirm --noprogressbar ${_args}
 }
 
 helper_svc_enable() {
-	if [[ "$1" == "" ]]; then return; fi
-	local _services=$*
-	sudo systemctl enable ${_services}
+	local _args=$*
+	if [[ "$_args" == "" ]]; then return; fi
+	sudo systemctl enable ${_args}
 }
 
 helper_svc_disable() {
-	if [[ "$1" == "" ]]; then return; fi
-	local _services=$*
-	sudo systemctl disable ${_services}
+	local _args=$*
+	if [[ "$_args" == "" ]]; then return; fi
+	sudo systemctl disable ${_args}
 }
 
 helper_svc_mask() {
-	if [[ "$1" == "" ]]; then return; fi
-	local _services=$*
-	sudo systemctl mask ${_services}
+	local _args=$*
+	if [[ "$_args" == "" ]]; then return; fi
+	sudo systemctl mask ${_args}
 }
 
 helper_cfg_get() {
-	local _index=$1
-	jq -r ".${_index} | flatten | join(\" \")" config.json
+	local _args=$*
+	if [[ "$_args" == "" ]]; then return; fi
+	jq -r ".${_args} | flatten | join(\" \")" config.json
 }
 
 helper_file_append() {
 	local _file=$1
 	local _content=$2
+	if [[ "$_file" == "" ]] || [[ "$_content" == "" ]]; then return; fi
 	grep -q -F "${_content}" "${_file}" || echo -E "${_content}" | sudo tee -a "${_file}"
 }
 
@@ -76,7 +78,7 @@ install_yay() {
 			git clone "https://aur.archlinux.org/yay.git" --depth=1
 
 			cd "${build_root}/yay" || exit 1
-			makepkg -si --noconfirm --needed
+			makepkg -scif --noconfirm --needed
 		)
 
 		rm -rf "${build_root}"
@@ -117,6 +119,10 @@ install_packages_dwm() {
 # -----------------------------------------------------------------------------
 install_packages_dwm_minimal() {
 	helper_pkg_install $(helper_cfg_get "packages.install.dwm_minimal")
+	helper_pkg_remove $(helper_cfg_get "packages.remove.dwm_minimal")
+	helper_svc_disable $(helper_cfg_get "services.disable.dwm_minimal")
+	helper_svc_enable $(helper_cfg_get "services.enable.dwm_minimal")
+	helper_svc_mask $(helper_cfg_get "services.mask.dwm_minimal")
 }
 
 # -----------------------------------------------------------------------------

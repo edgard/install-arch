@@ -9,6 +9,7 @@ CONFIG_DISK="/dev/sda"
 CONFIG_HOSTNAME="arch"
 CONFIG_USER="edgard"
 CONFIG_ZONEINFO="Europe/Warsaw"
+CONFIG_COUNTRY="PL"
 
 # -----------------------------------------------------------------------------
 # update mirrorlist

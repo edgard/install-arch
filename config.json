@@ -274,7 +274,8 @@
     },
     "remove": {
       "common": [],
-      "dwm": []
+      "dwm": [],
+      "dwm_minimal": []
     }
   },
   "services": {
@@ -283,7 +284,8 @@
       "dwm": [
         "dhcpcd.service",
         "systemd-resolved.service"
-      ]
+      ],
+      "dwm_minimal": []
     },
     "enable": {
       "common": [
@@ -306,14 +308,16 @@
         "tlp",
         "tlp-sleep",
         "ufw"
-      ]
+      ],
+      "dwm_minimal": []
     },
     "mask": {
       "common": [],
       "dwm": [
         "systemd-rfkill.service",
         "systemd-rfkill.socket"
-      ]
+      ],
+      "dwm_minimal": []
     }
   }
 }
