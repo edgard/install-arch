@@ -258,7 +258,8 @@
         ],
         "virtualbox_guest": [
           "virtualbox-guest-modules-arch",
-          "virtualbox-guest-utils"
+          "virtualbox-guest-utils",
+          "xf86-video-vmware"
         ],
         "virtualbox_host": [
           "virtualbox",
