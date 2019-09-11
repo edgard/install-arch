@@ -9,7 +9,9 @@
           "intel-ucode",
           "lm_sensors",
           "openssh",
-          "smartmontools"
+          "smartmontools",
+          "vim",
+          "vi-vim-symlink"
         ],
         "devel": [
           "base-devel",
@@ -20,13 +22,12 @@
         "misc": [
           "arch-diff",
           "bind-tools",
+          "downgrade",
           "htop",
           "iotop",
           "p7zip",
           "pacman-contrib",
-          "ranger",
           "socat",
-          "tmux",
           "traceroute",
           "unrar",
           "unzip",
@@ -195,44 +196,31 @@
       },
       "tools": {
         "devel": [
-          "go",
-          "goreleaser",
-          "python",
-          "python2"
-        ],
-        "devel_cloud": [
+          "ansible-lint",
           "ansible",
           "aws-cli",
+          "go",
           "google-cloud-sdk",
-          "kubectl",
-          "terraform"
-        ],
-        "misc": [
-          "aria2",
-          "asciinema",
-          "fd",
-          "fzf",
-          "neofetch",
-          "neovim",
-          "ripgrep",
-          "sshfs"
-        ],
-        "neovim_linters": [
-          "ansible-lint",
-          "bash-language-server",
-          "fixjson",
-          "golangci-lint",
-          "hadolint-bin",
+          "goreleaser",
           "jq",
-          "nodejs-jsonlint",
-          "prettier",
-          "python-black",
+          "kind-bin",
+          "kubectl",
+          "kubernetes-helm-bin",
+          "nodejs-localtunnel",
+          "operator-sdk",
+          "origin-client-bin",
+          "python",
+          "python2",
           "shellcheck",
           "shfmt",
-          "tflint",
-          "vint",
-          "yamllint",
-          "yapf"
+          "tfenv",
+          "yq"
+        ],
+        "misc": [
+          "antibody",
+          "fd",
+          "fzf",
+          "zsh"
         ]
       },
       "misc": {
@@ -291,7 +279,7 @@
     "enable": {
       "common": [
         "dhcpcd",
-        "docker.socket",
+        "docker",
         "haveged",
         "lm_sensors",
         "nscd",
