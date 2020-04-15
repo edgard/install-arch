@@ -199,6 +199,7 @@
           "ansible-lint",
           "ansible",
           "aws-cli",
+          "azure-cli",
           "go",
           "google-cloud-sdk",
           "goreleaser",
@@ -215,6 +216,15 @@
           "shfmt",
           "tfenv",
           "yq"
+        ],
+        "devel_vscode": [
+          "nodejs-yeoman",
+          "nodejs-generator-code",
+          "vsce"
+        ],
+        "devel_ms": [
+          "dotnet-sdk",
+          "powershell-bin"
         ],
         "misc": [
           "antibody",
